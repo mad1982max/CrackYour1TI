@@ -147,5 +147,5 @@ Main concepts: _container_, _line_, _track_ (row or column), _area_, _item_
 }
 ```
 
-- **Result**
-  <img src="/assets/images/grid.png" width="200" height="200">
+- **Result**  
+  <img src="/assets/images/grid.png">
