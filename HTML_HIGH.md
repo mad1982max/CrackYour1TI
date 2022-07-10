@@ -218,3 +218,29 @@ _<div>_ - non-semantic tag that can be used for dividing text
   </article>
 </section>
 ```
+
+# Describe the difference between a cookie, sessionStorage and localStorage?
+
+One of the main principles of REST API is stateless.
+After closing connecting server forgets everything about the user.
+But we can avoid it using cookie, sessionStorage or localStorage
+
+**Cookie** a small text file that is stored in browser.It contains from key-value pairs.
+Cookies are set by server using the response and HTTP-Header _Set-Cookie_. Cookies can contain _path_, _domain_ (both define where the cookie is accessible), _expires_, _max-age_ (time of cookies living), _secure_, _samesite_ (both defines security settings).
+When we send request to server next time browser sends the cookie using the _Cookie_ HTTP-header.
+
+==Restriction:==
+
+- max length of name=value pair is 4kb
+- max number of cookies per domain ~ 20
+
+**localStorage** and **sessionStorage** - allows to save data (key/value pairs) in the browser even after page refresh (_sessionStorage_) and browser restart (_localStorage_).
+
+==Features:==
+
+- Are not sent to server with each request.
+- Server can’t manipulate storage via HTTP headers.
+
+==Restriction:==
+
+- can save ~ 5 megabytes of data
