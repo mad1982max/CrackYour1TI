@@ -43,7 +43,8 @@ SEO - is the process of improving website to achieve a higher position in search
 Main steps:
 
 - Fill **title** tag (for understanding what a page is about)
-- Fill **meta** tags: _description_ (how pages to be described in the search listings), _keywords_, _charset_, _viewport_, _language_
+- Fill **meta** tags: _description_ (how pages to be described in the search listings), _keywords_, _charset_, _viewport_
+- Add attr _lang_ to _html_ tag,
 - Use _semantic HTML_ (menu, nav, header, footer, hX, section, main, link tags)
 - _Alternative text_ (alt) for images and videos
 - Use _meaningful URL_ (yes: xxx/product/1, no xxx/pageNNN, where NNN - number)
@@ -141,3 +142,25 @@ Main semantic tags: header, footer, main, section, article, aside, nav, link, hX
 
 They contain information about their content and its importance
 Due to this they improve accessability of the page (for screen readers as example) and improve ranking of the site after search engines works
+
+# What is accessibility? ARIA role means in a web application
+
+_Accessibility_ - providing better user experience for navigating and interacting with site depending on specific needs of people (people with disabilities or inability in some cases to use touch screens)
+_a11y_ - guideline with accessibility rules
+Main steps:
+
+- define the _language_ of your document or specific tag
+- set _title_ of the document
+- _hide_ unnecessary content for readers by using 'display:none' and provide mechanisms _to skip_ to desired content
+- add _alt_ attributes for imgs and videos
+- use _semantic_ tags
+- provide correct _focus_ for main elements when user use keyboard or voice devices
+- use _headings_ for ranking context
+- use _labeling_ in forms
+- _notifying_ the user of errors
+- _color contrast_ (provide readable text)
+
+_Aria-role_ - attribute of tags for providing semantic meaning and helping third party devices and soft to interact with the site thus providing best user experience
+Many semantic elements in HTML have a role by default.
+The role attribute can provide semantics for non-semantic elements.
+All values assigned to _role=""_ should correspond to valid _WAI-ARIA roles_.
