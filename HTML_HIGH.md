@@ -172,26 +172,26 @@ Main purposes:
 - improve _SEO_ by providing proper description of image for relevant ranking in web
 - provide _people with disabilities_ with best user experience when they use screen readers or other devices
 
-# Define semantic markup. What are the semantic meanings for <section>, <article>, <aside>, <nav>, <header>, <footer> and when/how should each be used in structuring html markup?
+# Define semantic markup. What are the semantic meanings for _section_, _article_, _aside_, _nav_, _header_, <footer> and when/how should each be used in structuring html markup?
 
-_<header>_ is used to define the header for a document or a section. It contains the information related to the title and heading of the related content.
+_header_ is used to define the header for a document or a section. It contains the information related to the title and heading of the related content.
 Often uses for introductory content, logo, navigation links.
-There can be several _<header>_ elements in one document.
+There can be several _header_ elements in one document.
 
-_<footer>_ is used to define the footer for a document or a section. Often it is used in the bottom of a page or a section. It may contains info about copyright info, contacts, sitemap
+_footer_ is used to define the footer for a document or a section. Often it is used in the bottom of a page or a section. It may contains info about copyright info, contacts, sitemap
 
-_<nav>_ is used for navigation on the site
+_nav_ is used for navigation on the site
 
-_<aside>_ is used for non main information (advertisement) or it can provide information about the main content. But in both cases the relationship must be indirect.
+_aside_ is used for non main information (advertisement) or it can provide information about the main content. But in both cases the relationship must be indirect.
 
-_<section>_ is used to group logically related content and create page sections (contacts, news)
+_section_ is used to group logically related content and create page sections (contacts, news)
 
-_<article>_ is specifies independent part of content that can be reuse (posts, news, blogs)
+_article_ is specifies independent part of content that can be reuse (posts, news, blogs)
 
 # When should you use section, div or article?
 
-_<section>_ - for grouping logically related content (contacts, news, posts, articles)
-_<article>_ - for independent reusable repeating content (posts, news, blogs)
+_section_ - for grouping logically related content (contacts, news, posts, articles)
+_article_ - for independent reusable repeating content (posts, news, blogs)
 _<div>_ - non-semantic tag that can be used for dividing text
 
 ```html
