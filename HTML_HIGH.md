@@ -187,3 +187,34 @@ _<aside>_ is used for non main information (advertisement) or it can provide inf
 _<section>_ is used to group logically related content and create page sections (contacts, news)
 
 _<article>_ is specifies independent part of content that can be reuse (posts, news, blogs)
+
+# When should you use section, div or article?
+
+_<section>_ - for grouping logically related content (contacts, news, posts, articles)
+_<article>_ - for independent reusable repeating content (posts, news, blogs)
+_<div>_ - non-semantic tag that can be used for dividing text
+
+```html
+<section class="posts">
+  <article class="post">
+    <h2 class="title">Post 1</h2>
+    <section class="content">
+      <div class="logo">
+        <img src="" alt="" />
+      </div>
+      <div class="text">bla-bla-bla 1</div>
+    </section>
+    <div class="author">Author 1</div>
+  </article>
+  <article class="post">
+    <h2 class="title">Post 2</h2>
+    <section class="content">
+      <div class="logo">
+        <img src="" alt="" />
+      </div>
+      <div class="text">bla-bla-bla 2</div>
+    </section>
+    <div class="author">Author 2</div>
+  </article>
+</section>
+```
