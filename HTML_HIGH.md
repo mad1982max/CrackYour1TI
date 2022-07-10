@@ -164,3 +164,10 @@ _Aria-role_ - attribute of tags for providing semantic meaning and helping third
 Many semantic elements in HTML have a role by default.
 The role attribute can provide semantics for non-semantic elements.
 All values assigned to _role=""_ should correspond to valid _WAI-ARIA roles_.
+
+# What is the purpose of the alt attribute on images?
+
+Main purposes:
+
+- improve SEO by providing proper description of image for relevant ranking in web
+- provide people with disabilities with best user experience when they use screen readers or other devices
