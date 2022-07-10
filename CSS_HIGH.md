@@ -48,7 +48,7 @@ _Cascading_ is the order in which different styles are applied to a web page. An
 
 Most used new features:
 
-- _Layout_ (**Flex**, **Grid**) - providing a more efficient way to lay out, align and distribute space among items in a container, even if we don't know the sizes of elements
+- _Layout_ (**Flex**, **Grid**) - providing a more efficient way to layout, align and distribute space among items in a container, even if we don't know the sizes of elements
 
 - _CSS Custom Properties_ which allow us to reuse some styles
 
@@ -75,3 +75,77 @@ Most used new features:
 - _Box Sizing_
 - _Media Queries_
 - _CSS 3D Transforms_
+
+# 4. Explain CSS grid layout with example
+
+**Grid** - two-dimensional grid-based layout system that provides more efficient way to layout, align and distribute space among items in a container
+Main concepts: _container_, _line_, _track_ (row or column), _area_, _item_
+
+- **HTML**
+
+```html
+<div id="grid">
+  <div id="logo">Logo</div>
+  <div id="photo">Photo</div>
+  <div id="title">Card Title</div>
+  <div id="score">Score</div>
+  <div id="stats">Stats</div>
+  <div id="board">Board</div>
+  <div id="controls">Controls</div>
+</div>
+```
+
+- **CSS**
+
+```css
+#grid {
+  display: grid;
+  gap: 4px;
+  grid-template:
+    "logo title board board board"
+    "stats stats  board board board"
+    "photo score ctrls ctrls ctrls";
+  grid-template-columns: repeat(2, 1fr) repeat(3, 2fr);
+  grid-template-rows: auto;
+}
+
+#grid > * {
+  display: block;
+  padding: 5px;
+  min-height: 50px;
+  border: 1px solid #cdbb55;
+  border-radius: 5px;
+  background: #aaeebb;
+}
+
+#logo {
+  grid-area: logo;
+}
+
+#photo {
+  grid-area: photo;
+}
+
+#title {
+  grid-area: title;
+}
+
+#score {
+  grid-area: score;
+}
+
+#stats {
+  grid-area: stats;
+}
+
+#board {
+  grid-area: board;
+}
+
+#controls {
+  grid-area: ctrls;
+}
+```
+
+- **Result**
+  <img src="/assets/images/grid.png" width="200" height="200">

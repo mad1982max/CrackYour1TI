@@ -190,7 +190,7 @@ _article_ is specifies independent part of content that can be reuse (posts, new
 
 # 11. When should you use section, div or article?
 
-_section_ - for grouping logically related content (contacts, news, posts, articles)
+_section_ - for grouping logically related content (contacts, news, posts, articles)  
 _article_ - for independent reusable repeating content (posts, news, blogs)
 _<div>_ - non-semantic tag that can be used for dividing text
 
