@@ -105,3 +105,29 @@ which define page's dimensions and scaling
 ```
 
 - use _external_ libraries (Bootstrap)
+
+# What are the building blocks of HTML5?
+
+- _Tag_ - wrapper for content. Should be write between ** < ** and ** > **
+  Exists 2 type of tags:
+  - with closing pair
+  ```html
+  <div>Some content</div>
+  ```
+  - self-closing
+  ```html
+  <img src="some url" alt="some text" />
+  ```
+- _Attribute_ - some additional info for tag. Consist from _key_ and _value_ applied with the starting tag
+
+```html
+<div class="alert">Some content</div>
+```
+
+But exists attributes that can be wrote without _value_ (value are 'true' by default)
+
+```html
+  <button disabled>Push me</div>
+```
+
+- _Element_ = Open Tag with attributes + Content + Closing tag
