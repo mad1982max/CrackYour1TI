@@ -1,4 +1,4 @@
-# What are the possible ways to apply CSS styles to a web page?
+# 1. What are the possible ways to apply CSS styles to a web page?
 
 It is exists 3 ways to add styles to the page:
 
@@ -40,6 +40,38 @@ It is exists 3 ways to add styles to the page:
 </html>
 ```
 
-# What does the cascading portion of CSS mean?
+# 2. What does the cascading portion of CSS mean?
 
-_Cascading_ is the order in which different styles are applied to a web page. Another words styling rules “cascade” down from several sources and overwrite styles rules depending of _importance_, _origin_, _specificity_, and source _order_.
+_Cascading_ is the order in which different styles are applied to a web page. Another words styling rules “cascade” down from several sources and overwrite styles rules depending of _importance_ (adding _important_ to rule), _origin_ (browser, user rules), _specificity_ (weight of rule), _inheritance_ (some CSS properties by default inherit values set on the current element's parent element and some don't) and source _order_ (if the weight of the rule is the same, the lowest rule overwrites the style).
+
+# 3. New features in CSS3
+
+Most used new features:
+
+- _Layout_ (**Flex**, **Grid**) - providing a more efficient way to lay out, align and distribute space among items in a container, even if we don't know the sizes of elements
+
+- _CSS Custom Properties_ which allow us to reuse some styles
+
+```css
+:root {
+  --alert-color: red;
+}
+
+#user {
+  color: var(--alert-color);
+}
+```
+
+- _CSS Filters_ for manipulations with images
+- _Box/Text Shadow_
+- _Opacity_
+- Expands _Attribute Selectors_
+- Expand _pseudo-classes_
+- _Rounded Corners_
+- _New Colors_ (RGBA, HSL, HSLA, Gradients)
+- _Multiple Background Images_
+- _CSS Animations_
+- _Calculating Values With calc()_
+- _Box Sizing_
+- _Media Queries_
+- _CSS 3D Transforms_

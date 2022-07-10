@@ -1,4 +1,4 @@
-# What is Critical Rendering Path?
+# 1. What is Critical Rendering Path?
 
 CRP is a sequence of events that happening in the browser in the middle of such points:
 
@@ -37,7 +37,7 @@ Main CRP steps:
 
 6. Paint - converting visible content of the page to pixels to be displayed on the screen
 
-# How can I get indexed better by search engines?
+# 2. How can I get indexed better by search engines?
 
 SEO - is the process of improving website to achieve a higher position in search engine's ranking
 Main steps:
@@ -53,14 +53,14 @@ Main steps:
 - Prefer _SSR in SPA_
 - Orient to most popular Search Engines when improving html
 
-# What is desktop first and mobile first design approach?
+# 3. What is desktop first and mobile first design approach?
 
 Two different ways of creating responsive web design:
 
 - Desktop first: write ccs rules for desktop at first and extend them with css rules for smaller screens (mobile devices)
 - Mobile first: designing process starts for the smallest devices first and then add more functionalities for bigger screen sizes
 
-# How to make page responsive?
+# 4. How to make page responsive?
 
 We must strive for responsive web design. Our app should looks good on different screen sizes.
 It is automatically process.
@@ -107,7 +107,7 @@ which define page's dimensions and scaling
 
 - use _external_ libraries (Bootstrap)
 
-# What are the building blocks of HTML5?
+# 5. What are the building blocks of HTML5?
 
 - _Tag_ - wrapper for content. Should be write between ** < ** and ** > **
   Exists 2 type of tags:
@@ -133,17 +133,17 @@ But exists attributes that can be wrote without _value_ (value are 'true' by def
 
 - _Element_ = Open Tag with attributes + Content + Closing tag
 
-# What are the semantic tags available in html5?
+# 6. What are the semantic tags available in html5?
 
 _Semantic tags_ - tags that have meaning for search engines, accessability and people. Due to such tags we can define their content and its importance.
 Main semantic tags: header, footer, main, section, article, aside, nav, link, hX, small, time etc
 
-# Why you would like to use semantic tag?
+# 7. Why you would like to use semantic tag?
 
 They contain information about their content and its importance
 Due to this they improve accessability of the page (for screen readers as example) and improve ranking of the site after search engines works
 
-# What is accessibility? ARIA role means in a web application
+# 8. What is accessibility? ARIA role means in a web application
 
 _Accessibility_ - providing better user experience for navigating and interacting with site depending on specific needs of people (people with disabilities or inability in some cases to use touch screens)
 _a11y_ - guideline with accessibility rules
@@ -165,14 +165,14 @@ Many semantic elements in HTML have a role by default.
 The role attribute can provide semantics for non-semantic elements.
 All values assigned to _role=""_ should correspond to valid _WAI-ARIA roles_.
 
-# What is the purpose of the alt attribute on images?
+# 9. What is the purpose of the alt attribute on images?
 
 Main purposes:
 
 - improve _SEO_ by providing proper description of image for relevant ranking in web
 - provide _people with disabilities_ with best user experience when they use screen readers or other devices
 
-# Define semantic markup. What are the semantic meanings for _section_, _article_, _aside_, _nav_, _header_, <footer> and when/how should each be used in structuring html markup?
+# 10. Define semantic markup. What are the semantic meanings for _section_, _article_, _aside_, _nav_, _header_, <footer> and when/how should each be used in structuring html markup?
 
 _header_ is used to define the header for a document or a section. It contains the information related to the title and heading of the related content.
 Often uses for introductory content, logo, navigation links.
@@ -188,7 +188,7 @@ _section_ is used to group logically related content and create page sections (c
 
 _article_ is specifies independent part of content that can be reuse (posts, news, blogs)
 
-# When should you use section, div or article?
+# 11. When should you use section, div or article?
 
 _section_ - for grouping logically related content (contacts, news, posts, articles)
 _article_ - for independent reusable repeating content (posts, news, blogs)
@@ -219,7 +219,7 @@ _<div>_ - non-semantic tag that can be used for dividing text
 </section>
 ```
 
-# Describe the difference between a cookie, sessionStorage and localStorage?
+# 12. Describe the difference between a cookie, sessionStorage and localStorage?
 
 One of the main principles of REST API is stateless.
 After closing connecting server forgets everything about the user.
