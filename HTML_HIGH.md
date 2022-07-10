@@ -49,7 +49,7 @@ Main steps:
 - Use _meaningful URL_ (yes: xxx/product/1, no xxx/pageNNN, where NNN - number)
 - Create _XML or HTML sitemaps_
 - _Quick loading_ of the pages
-- Prefer _SSR_
+- Prefer _SSR in SPA_
 - Orient to most popular Search Engines when improving html
 
 # What is desktop first and mobile first design approach?
@@ -58,3 +58,50 @@ Two different ways of creating responsive web design:
 
 - Desktop first: write ccs rules for desktop at first and extend them with css rules for smaller screens (mobile devices)
 - Mobile first: designing process starts for the smallest devices first and then add more functionalities for bigger screen sizes
+
+# How to make page responsive?
+
+We must strive for responsive web design. Our app should looks good on different screen sizes.
+It is automatically process.
+
+Steps:
+
+- Set instruction to **viewport** in **meta** tag:
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+```
+
+which define page's dimensions and scaling
+
+- Responsive IMGs
+  Set to **img** _max-width:100%_
+
+- Use different sets of images for different screen sizes
+
+```html
+<picture>
+  <source srcset="small.jpg" media="(max-width: 500px)" />
+  <source srcset="bigger.jpg" media="(max-width: 1000px)" />
+  <source srcset="biggest.jpg" />
+  <img src="small.jpg" alt="cow eats grass" />
+</picture>
+```
+
+- Responsive _sizes_ of elements based on %, vw, vh, em, rem
+
+- _Media Queries_ - set of css rules for different screens, screen sizes and other specific characteristics(orientation, existing hover)
+
+```css
+@media screen and (min-width: 1000px) and (orientation: landscape) {
+  ...;
+}
+```
+
+```css
+@media (width >= 1000px) {
+  ...;
+}
+```
+
+- use _external_ libraries (Bootstrap)
