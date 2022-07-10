@@ -25,7 +25,7 @@ Main CRP steps:
    - script execution
      Blocking operation.
 
-   It is exist 3 behaviors of scripts:
+   It is exists 3 behaviors of scripts:
 
    - default behavior (tag 'script' without additional attribute) when fetching and executing block html parsing
    - with **async** attr: only script execution interrupt html parsing, fetching is parallel
@@ -33,6 +33,20 @@ Main CRP steps:
 
 4. Render TREE - combining of DOM and CSSOM together. It contains the contents and the styles associated with the content. Only visible content.
 
-5. Layout - figure out where and how all the elements are positioned on page (width,height,position etc.)
+5. Layout - step where browser figure out where and how all the elements are positioned on page (width,height,position etc.)
 
 6. Paint - converting visible content of the page to pixels to be displayed on the screen
+
+# How can I get indexed better by search engines?
+
+SEO - is the process of improving website to achieve a higher position in search engine's ranking
+Main steps:
+
+- Fill **title** tag (for understanding what a page is about)
+- Fill **meta** tags: _description_ (how pages to be described in the search listings), _keywords_, _charset_, _viewport_, _language_
+- Use _semantic HTML_ (menu, nav, header, footer, hX, section, main, link tags)
+- _Alternative text_ (alt) for images and videos
+- Use _meaningful URL_ (yes: xxx/product/1, no xxx/pageNNN, where NNN - number)
+- Create _XML or HTML sitemaps_
+- _Quick loading_ of the pages
+- Prefer _SSR_
