@@ -50,3 +50,11 @@ Main steps:
 - Create _XML or HTML sitemaps_
 - _Quick loading_ of the pages
 - Prefer _SSR_
+- Orient to most popular Search Engines when improving html
+
+# What is desktop first and mobile first design approach?
+
+Two different ways of creating responsive web design:
+
+- Desktop first: write ccs rules for desktop at first and extend them with css rules for smaller screens (mobile devices)
+- Mobile first: designing process starts for the smallest devices first and then add more functionalities for bigger screen sizes
