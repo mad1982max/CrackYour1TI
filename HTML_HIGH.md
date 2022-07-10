@@ -134,5 +134,10 @@ But exists attributes that can be wrote without _value_ (value are 'true' by def
 
 # What are the semantic tags available in html5?
 
-_Semantic tags_ - tags that have meaning for search engines, screen readers and people. Due to such tags we can define their content and its importance.
+_Semantic tags_ - tags that have meaning for search engines, accessability and people. Due to such tags we can define their content and its importance.
 Main semantic tags: header, footer, main, section, article, aside, nav, link, hX, small, time etc
+
+# Why you would like to use semantic tag?
+
+They contain information about their content and its importance
+Due to this they improve accessability of the page (for screen readers as example) and improve ranking of the site after search engines works
