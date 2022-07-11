@@ -152,13 +152,29 @@ Main concepts: _container_, _line_, _track_ (row or column), _area_, _item_
 
 # 5. What is CSS preprocessor?
 
-**CSS preprocessors** are scripting languages that extend the default capabilities of CSS (variables, nesting, inheritance, mixins, functions, mathematical operations)
+**CSS preprocessors** is a program that extend the default capabilities of CSS (variables, nesting, inheritance, mixins, functions, mathematical operations)
 
-Most popular: Sass, LESS, Stylus, PostCSS. They do the same but in different ways and with its own syntaxes.
+The Most popular are Sass, LESS, Stylus, PostCSS. They do the same but in different ways and with its own syntaxes.
 
 As example:
 **Sass** has two syntaxes (_.sass_: indentation-based and omits semicolons and curly brackets and _.scss_ with standard CSS syntax with braces and semicolons).
 _Main features_: variables, @mixins, @extends, Loops and conditionals, nesting
+
+```scss
+$primary-font-size: 14px;
+
+@mixin reset {
+  margin: 0;
+  padding: 0;
+}
+
+.custom-button {
+  font-size: $primary-font-size;
+  @include reset &: hover {
+    font-size: 36px;
+  }
+}
+```
 
 _Advantages_ of using preprocessors:
 
@@ -168,13 +184,13 @@ _Pros_:
 - It is easier to maintain the code
 - Code becomes more organized
 - Special functionality of joining multiple stylesheets into one
-- backward compatibility
+- Backward compatibility
 
 _Cons_:
 
-- harder to Debug
-- compilation slows down development
-- additional knowledge for developers
+- Harder to Debug
+- Compilation slows down development
+- Additional knowledge for developers
 
 _Flow_:
 CSS Preprocessor => Transpiler => CSS file
