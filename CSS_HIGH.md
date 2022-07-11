@@ -160,8 +160,11 @@ As example:
 **Sass** has two syntaxes (_.sass_: indentation-based and omits semicolons and curly brackets and _.scss_ with standard CSS syntax with braces and semicolons).
 _Main features_: variables, @mixins, @extends, Loops and conditionals, nesting
 
+**WAS**
+
 ```scss
 $primary-font-size: 14px;
+$hover-primary-font-size: 16px;
 
 @mixin reset {
   margin: 0;
@@ -169,10 +172,24 @@ $primary-font-size: 14px;
 }
 
 .custom-button {
+  @include reset;
   font-size: $primary-font-size;
-  @include reset &: hover {
-    font-size: 36px;
+  &:hover {
+    font-size: $hover-primary-font-size;
   }
+}
+```
+
+**BECOMES**
+
+```css
+.custom-button {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+.custom-button:hover {
+  font-size: 16px;
 }
 ```
 
