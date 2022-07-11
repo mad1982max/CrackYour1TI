@@ -211,3 +211,22 @@ _Cons_:
 
 _Flow_:
 CSS Preprocessor => Transpiler => CSS file
+
+# 6. What are media queries?
+
+**Media queries** - queries inside css that allows to modify styles rules depending on specific characteristics and parameters (screen, print, orientation, width/height of the screen)
+
+They describe:
+
+- media types (all, print, screen)
+- media features (characteristic of the user agent, output device, or environment)
+  Includes:
+- logical operators (not, and, only and their combinations)
+
+As example
+
+```css
+@media (min-width: 600px) and (orientation: landscape) {
+  ...;
+}
+```
