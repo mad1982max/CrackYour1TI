@@ -53,14 +53,11 @@ _document_ object is property of window object
 
 # 6. What is isNaN?
 
-NaN is short for "Not-a-Number"  
-NaN is a number that is not a legal number
+The isNaN() method returns true if a value is NaN.
 
 Examples
 
 ```js
-console.log("string" * 25); // "NaN"
-console.log(typeof NaN); // "number"
 console.log(isNaN(NaN)); // "true"
 console.log(NaN === NaN); // false
 ```
@@ -85,3 +82,13 @@ Variables declared Globally (outside any function) have Global Scope.
 Global variables can be accessed from anywhere in a JS program.
 
 In _non strict_ mode: If we assign a value to a variable that has _not been declared_, it will automatically become a _GLOBAL_ variable.
+
+# 10. What is NaN property?
+
+The Global NaN property is the same as the Number.NaN property. Where _Number_ - object that enables us to represent a numeric value.
+NaN is short for "Not-a-Number".
+NaN is a number that is not a legal number.
+
+```js
+console.log(Number.NaN); // NaN
+```
