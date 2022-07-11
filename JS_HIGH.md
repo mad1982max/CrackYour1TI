@@ -73,3 +73,15 @@ console.log(NaN === NaN); // false
 | updated/re-declared             | It can be updated and re-declared into the scope | It can be updated but cannot be re-declared into the scope | It cannot be updated (except objects) or re-declared into the scope |
 | declared without initialization | YES                                              | YES                                                        | NO                                                                  |
 | accessed without initialization | return “undefined”                               | return error                                               | return error                                                        |
+
+# 8. What are the differences between undeclared and undefined variables?
+
+**Undefined** - variable has been declared but it does not have a value.  
+**Undeclared** - the variable does not exist in the program at all.
+
+# 9. What are global variables?
+
+Variables declared Globally (outside any function) have Global Scope.
+Global variables can be accessed from anywhere in a JS program.
+
+In _non strict_ mode: If we assign a value to a variable that has _not been declared_, it will automatically become a _GLOBAL_ variable.
