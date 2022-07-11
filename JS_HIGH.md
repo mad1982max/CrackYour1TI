@@ -67,12 +67,15 @@ console.log(NaN === NaN); // false
 
 # 7. What is the difference between let, const and var?
 
-## |-----|var| let |const|
+| ----- | var | let | const |
+| ----- | --- | --- | ----- |
 
-## |scope|functional scope|block|block|
+| scope | functional scope | block | block |
+| ----- | ---------------- | ----- | ----- |
 
-## |updated/re-declared|It can be updated and re-declared into the scope|It can be updated but cannot be re-declared into the scope| It cannot be updated or re-declared into the scope|
+| updated/re-declared | It can be updated and re-declared into the scope | It can be updated but cannot be re-declared into the scope | It cannot be updated or re-declared into the scope |
+| ------------------- | ------------------------------------------------ | ---------------------------------------------------------- | -------------------------------------------------- |
 
-## |declared without initialization|YES|YES|NO
-
-## |accessed without initialization| return “undefined” | return error| error|
+| declared without initialization | YES                | YES          | NO           |
+| ------------------------------- | ------------------ | ------------ | ------------ |
+| accessed without initialization | return “undefined” | return error | return error |
