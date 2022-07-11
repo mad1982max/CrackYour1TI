@@ -220,7 +220,9 @@ They describe:
 
 - media types (all, print, screen)
 - media features (characteristic of the user agent, output device, or environment)
-  Includes:
+
+Includes:
+
 - logical operators (not, and, only and their combinations)
 
 As example
@@ -230,3 +232,15 @@ As example
   ...;
 }
 ```
+
+# 7. What does box-sizing do?
+
+**box-sizing** defines if _padding_ and _border_ are includes to total width and height of an element
+
+**Syntax**
+_box-sizing: content-box|border-box|initial|inherit;_
+
+- content-box - default: width and height of the element includes only content
+- border-box - width and height of the element includes content, padding and border
+- initial - sets to default
+- inherit - inherits this property from its parent element
