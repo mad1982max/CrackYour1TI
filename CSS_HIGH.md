@@ -193,8 +193,6 @@ $hover-primary-font-size: 16px;
 }
 ```
 
-_Advantages_ of using preprocessors:
-
 _Pros_:
 
 - CSS follows DRY principle
@@ -288,16 +286,13 @@ Animation via CSS are used
 
 **JS Animation** uses _Web Animations API_
 
-_Frameworks_ for animation in JS:
-
-- GreenSock
-- Velocity
-- WebGL
-- jQuery
-
 JS Animation are used:
 
 - in more complicated cases when we want get full control of animation (slow down, pause them, stop, reverse, and manipulate elements ) in all steps and interact with user actions
 - required animation is not supported by CSS
 
-For more complicated cases we can use _requestAnimationFrame_, WebGL API
+_Frameworks_ for animation in JS:
+
+- GreenSock
+- Velocity
+- jQuery etc.

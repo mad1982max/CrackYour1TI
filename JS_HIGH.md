@@ -36,8 +36,43 @@ Falsy value
 
 # 4. What is the difference between null and undefined?
 
-_null_ - “nothing”, “empty” or “value unknown”
+_null_ - “nothing”, “empty” or “value unknown”  
 _undefined_ - variable is declared, but value is not assigned
 
-Both are _falsy_ values
+Both are _falsy_ values  
 To separate null and undefined from other falsy value we can use _Nullish coalescing operator (??)_
+
+# 5. What is the difference between window and document?
+
+**window** - topmost object in the BOM(Browser Object Model). It represents the window, tab, sometimes iframe and has properties like browser history, location and the device’s screen.
+
+**document** - object represents the whole html document as a tree of Objects(HTML, HEAD, BODY, and other HTML tags). It is the root element that represents the html document.
+
+HTML document that gets loaded into a _window_ becomes a _document_ object
+_document_ object is property of window object
+
+# 6. What is isNaN?
+
+NaN is short for "Not-a-Number"  
+NaN is a number that is not a legal number
+
+Examples
+
+```js
+console.log("string" * 25); // "NaN"
+console.log(typeof NaN); // "number"
+console.log(isNaN(NaN)); // "true"
+console.log(NaN === NaN); // false
+```
+
+# 7. What is the difference between let, const and var?
+
+## |-----|var| let |const|
+
+## |scope|functional scope|block|block|
+
+## |updated/re-declared|It can be updated and re-declared into the scope|It can be updated but cannot be re-declared into the scope| It cannot be updated or re-declared into the scope|
+
+## |declared without initialization|YES|YES|NO
+
+## |accessed without initialization| return “undefined” | return error| error|
