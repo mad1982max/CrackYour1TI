@@ -244,3 +244,57 @@ _box-sizing: content-box|border-box|initial|inherit;_
 - border-box - width and height of the element includes content, padding and border
 - initial - sets to default
 - inherit - inherits this property from its parent element
+
+# 8. Explain some pros and cons for CSS animations versus JavaScript animations
+
+Animations on the HTML elements with CSS can be achieved by using _CSS Transitions_ or _CSS Animations_
+
+**CSS Transitions** use css property _'transition'_ and set delay of the animation , duration, name of the animated property and timing function.
+
+```css
+.some-class {
+  transition: width 1s linear 1s;
+}
+```
+
+**CSS Animations** use _@keyframes_ rule where we can define list of css styles in certain point of animation
+
+```css
+@keyframes some-animation {
+  0% {
+    background-color: green;
+    width: 200px;
+  }
+  50% {
+    background-color: black;
+    width: 250px;
+  }
+  75% {
+    background-color: red;
+    width: 300px;
+  }
+  100% {
+    background-color: orange;
+    width: 350px;
+  }
+}
+```
+
+Animation via CSS are used
+
+- with small simple animations (open/close burger menu, appear navigation from the border of the screen, showing a tooltips)
+- when JS is disabled
+
+**JS Animation** uses _Web Animations API_
+
+_Frameworks_ for animation in JS:
+
+- GreenSock
+- Velocity
+- WebGL
+- jQuery
+
+JS Animation are used:
+
+- in more complicated cases when we want get full control of animation (slow down, pause them, stop, reverse, and manipulate elements ) in all steps and interact with user actions
+- required animation is not supported by CSS
