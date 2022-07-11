@@ -284,6 +284,7 @@ Animation via CSS are used
 
 - with small simple animations (open/close burger menu, appear navigation from the border of the screen, showing a tooltips)
 - when JS is disabled
+- when we don't want to use some external libraries
 
 **JS Animation** uses _Web Animations API_
 
@@ -298,3 +299,5 @@ JS Animation are used:
 
 - in more complicated cases when we want get full control of animation (slow down, pause them, stop, reverse, and manipulate elements ) in all steps and interact with user actions
 - required animation is not supported by CSS
+
+For more complicated cases we can use _requestAnimationFrame_, WebGL API
