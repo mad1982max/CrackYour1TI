@@ -185,3 +185,59 @@ All of them immediately call the function.
 _bind_ - all parameters are passed one by one, with coma
 This function will execute later
 Can be used as a partially applied functions
+
+# 16. What is scope in javascript?
+
+The _scope_ is the current context of execution in which values and expressions are "visible" or can be referenced.
+Another words _scope_ is the area where variables are available
+If a variable or expression is not in the current scope, it will not be available for use.
+Scopes can also be layered in a hierarchy, so that child scopes have access to parent scopes, but not vice versa.
+
+Types of copes:
+
+_Global_ scope: The default scope for all code running in script mode.
+_Module_ scope: The scope for code running in module mode.
+_Function_ scope: The scope created with a function.
+_Block_ scope: The scope created with a pair of curly braces (a block).
+
+# 17. What is prototype chain?
+
+One of the main features of JS is _prototype inheritance_.
+Objects have a special hidden property _[[Prototype]]_ , which is either null or refers to another object.
+If we call some method, and it is not in the object, we try to find it in the "parent" object ([[Prototype]] points to it).
+If we can't find it again, we repeat the procedure until we get to the top parent.
+
+# 18. What is JSON and its common operations?
+
+JSON - object JS for working with json
+JSON.parse(text[, reviver]) - json to JavaScript object
+JSON.stringify(value[, replacer[, space]]) - convert a JavaScript object into a string
+
+# 19. How do you parse JSON string?
+
+JSON.parse(text[, reviver])
+
+# 20. What is the purpose JSON stringify?
+
+convert a JavaScript object into a string
+
+# 21. What array methods do you know?
+
+pop, push, shift, unshift, concat, slice, splice, any, every, filter, sort, map, forEach, reduce, fill, find, findIndex, flat, flat, entries
+
+# 22. What is the difference between Array.forEach() and Array.map()?
+
+- forEach(function(element, index, array) { /_ ... _/ }, thisArg) - method executes a provided function once for each array element
+
+- map(function(element, index, array) { /_ ... _/ }, thisArg) - creates a new array populated with the results of calling a provided function on every element in the calling array.
+
+# 23. What are lambda or arrow functions?
+
+It allows you to create functions in a cleaner way compared to regular functions.
+
+```js
+let x = (x, y) => x * y;
+```
+
+- Arrow function does not have its own **this**. _This_ refers to its parent scope.
+- Arrow functions don't have pseudo array **arguments**. We should use _spread_ operator to receive all parameters
