@@ -241,3 +241,35 @@ let x = (x, y) => x * y;
 
 - Arrow function does not have its own **this**. _This_ refers to its parent scope.
 - Arrow functions don't have pseudo array **arguments**. We should use _spread_ operator to receive all parameters
+
+# 24. What is a pure function?
+
+The same input parameters will give the same output regardless of how many times you run the function.
+Pure functions do not have side effects.
+Debugging pure functions is relatively easier than debugging impure functions.
+
+# 25. What are closures?
+
+A _closure_ gives us access to an outer function's scope from an inner function
+
+```js
+const counter = () => {
+  let counter = 0;
+  return {
+    add: (increment = 1) => {
+      counter += increment;
+    },
+    get status() {
+      return counter;
+    },
+  };
+};
+
+const firstCounter = counter();
+firstCounter.add();
+console.log(firstCounter.status); // 1
+
+const secondCounter = counter();
+secondCounter.add(10);
+console.log(secondCounter.status); // 10
+```
