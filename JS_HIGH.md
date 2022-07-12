@@ -11,7 +11,11 @@ Primitive data types:
 - undefined (unassigned values)
 - symbol (unique identifiers)
 
-_Main feature_: after declare they are stored on a _stack_ and assigned to variables by _value_, not by reference
+_Main features_:
+
+- After declare they are stored on a _stack_ and assigned to variables by _value_, not by reference
+- All primitives are _immutable_, i.e., they cannot be altered
+- _Autoboxing_ (methods and properties)
 
 # 2. What is undefined property?
 
@@ -92,3 +96,92 @@ NaN is a number that is not a legal number.
 ```js
 console.log(Number.NaN); // NaN
 ```
+
+# 11. What are classes in ES6?
+
+Classes - syntaxes sugar in ES6, it is a template for creating objects in future.
+_Main features_: prototype-based inheritance, constructors, super calls, instance and static methods
+
+```js
+class Employee {
+  constructor(name) {
+    this.name = name;
+  }
+  greet() {
+    console.log(`Hello, I am ${this.name}`);
+  }
+  static getCompany() {
+    return "Epam";
+  }
+}
+
+class Developer extends Employee {
+  constructor(name, role) {
+    super(name);
+    this.role = role;
+  }
+}
+```
+
+# 12. How do you copy properties from one object to other?
+
+```js
+const user = {
+  name: "Maks"
+}
+
+//manually adding key/value through a loop using Object keys or entries
+const user1 = ...
+
+//spread operator
+const user2 = {...user}
+
+//Object.assign
+const user3 = Object.assign({}, user)
+
+//JSON.parse/stringify
+const user4 = JSON.parse(JSON.stringify(user))
+```
+
+The last is _deep_ copy, but it can't clone methods
+
+# 13. What is Hoisting?
+
+**Hoisting** mechanism where variables and function declarations are moved to the top of their scope before code execution
+
+_var_
+
+```js
+console.log(a); // undefined;
+var a = "a";
+```
+
+_function declaration_
+
+```js
+hello(); // 'hello'
+function hello() {
+  console.log("hello");
+}
+```
+
+# 14. How do you assign default values to variables?
+
+```js
+const a = 100;
+const b = a || 1000;
+//or
+const b = a ?? 1000;
+```
+
+# 15. What is the difference between Call, Apply and Bind?
+
+They are all use for calling function with specific context(first parameter) and passing parameters to it
+
+_call_ - all parameters are passed one by one, with coma
+_apply_ - all parameters are passed in array
+All of them immediately call the function.
+
+_bind_ - all parameters are passed one by one, with coma
+This function will execute later
+Can be used as a partially applied functions
