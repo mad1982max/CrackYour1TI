@@ -375,8 +375,8 @@ Call stack is a LIFO (last in first out) data structure. All of the function cal
 
 # 38. How do you validate an email in javascript?
 
-add OnChange to input
-or
+add OnChange to input  
+or  
 validate after user push submit on form
 
 with RegExp
