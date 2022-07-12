@@ -273,3 +273,141 @@ const secondCounter = counter();
 secondCounter.add(10);
 console.log(secondCounter.status); // 10
 ```
+
+Every closure has three scopes:
+
+- Local scope (Own scope)
+- Enclosing scope (can be block, function, or module scope)
+- Global scope
+
+In the case where the outer function is itself a nested function, access to the outer function's scope includes the enclosing scope of the outer function—effectively creating a _chain of function scopes_.
+
+# 26. What is IIFE(Immediately Invoked Function Expression)?
+
+IIFE is a way to execute functions _immediately_, as soon as they are created.
+
+IIFEs are very useful because they don't pollute the global object, and they are a simple way to isolate variables declarations
+IIFEs starting with a _semicolon_ - This prevents issues when blindly concatenating two JavaScript files
+
+# 27. What is a callback function?
+
+_Callback_ is a function that are passed to another functions as parameter and are called inside the outer functions.  
+Callbacks make sure that a function is not going to run before a task is completed but will run right after the task has completed.
+Used in asynchronous programming.
+
+# 28. What is a promise?
+
+Promise is a proxy for a value that will eventually become available.
+Helps to avoid _callback hell_.
+
+Once a promise has been called, it will start in a pending state.
+This means that the calling function continues executing, while the promise is pending until it resolves, giving the calling function whatever data was being requested.
+
+The created promise will eventually end in a resolved state, or in a rejected state, calling the respective callback functions (passed to then and catch) upon finishing.
+
+A promise can be returned to another promise, creating a chain of promises.
+
+When anything in the chain of promises fails and raises an error or rejects the promise, the control goes to the nearest catch() statement down the chain.
+
+```js
+const promise = new Promise((resolve, reject) => {
+  resolve("some data");
+});
+
+promise
+  .then((data) => console.log(data)) //'some data'
+  .catch((err) => console.log(err))
+  .finally(() => console.log("some text")); // 'some text'
+```
+
+# 29. Why do you need a promise?
+
+To avoid _callback hell_ : callback nesting
+
+# 30. What are the states of promise?
+
+A Promise has _four_ states:
+
+- _fulfilled_: Action related to the promise succeeded.
+- _settled_: Promise has fulfilled or rejected.
+  - _rejected_: Action related to the promise failed.
+  - _pending_: Promise is still pending i.e. not fulfilled or rejected yet.
+
+# 31. Why do we need callbacks?
+
+Callbacks make sure that a function is not going to run before a task is completed but will run right after the task has completed.
+Used in asynchronous programming.
+
+# 32. What is a callback hell?
+
+"callback nesting" or "callback in callback"
+
+# 33. What is promise chaining?
+
+A promise can be returned to another promise, creating a chain of promises.
+
+# 34. What is the use of setTimeout?
+
+The global setTimeout() method sets a timer which executes a function or specified piece of code once the timer expires.
+
+The returned intervalID is a numeric, non-zero value which identifies the timer
+
+Syntax:
+setTimeout(someFunction, delay, param1, param2, /_ ... ,_/ paramN)
+
+# 35. What is the use of setInterval?
+
+The setInterval() method repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.  
+The returned intervalID is a numeric, non-zero value which identifies the timer.
+
+Syntax:
+setInterval(func, delay, arg0, arg1, /_ ... ,_/ argN)
+
+# 36. What is an event loop?
+
+There’s an endless loop, where the JavaScript engine waits for tasks, executes them and then sleeps, waiting for more tasks.
+The Event Loop has one simple job — to monitor the Call Stack and the Callback Queue.
+If the Call Stack is empty, the Event Loop will take the first event from the queue and will push it to the Call Stack, which effectively runs it.
+
+# 37. What is call stack?
+
+Call stack is a LIFO (last in first out) data structure. All of the function calls are pushed into this call stack.
+
+# 38. How do you validate an email in javascript?
+
+add OnChange to input
+or
+validate after user push submit on form
+
+with RegExp
+
+```js
+/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)\*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+```
+
+or
+
+```js
+/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+```
+
+# 39. What are modules?
+
+Module is a file that contains code to perform a specific task.  
+A module may contain variables, functions, classes etc.
+
+# 40. Why do you need modules?
+
+Encapsulation, Readability, Maintainability, Split logic
+
+# 41. What is a rest parameter?
+
+The rest parameter syntax (...) allows a function to accept an indefinite number of arguments as an array
+
+# 42. What is a spread operator?
+
+The spread operator (...) helps you expand iterables into individual elements.
+
+# 43. What is nodejs?
+
+Node.js is an open-source and cross-platform runtime environment built on Chrome’s V8 JavaScript engine for executing JavaScript code outside of a browser.
