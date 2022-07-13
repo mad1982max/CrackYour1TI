@@ -222,3 +222,20 @@ In useMemo it remembers the value returned between renders, and in React.memo it
 # 19. How do you memoize a component?
 
 **React.memo** is a higher-order component (or HOC for short) which accepts a react component and an optional function that uses props to conditionally update the component using memoization
+
+# 20. What is Virtual DOM?
+
+Virtual DOM is just a copy of the original DOM kept in the memory and synced with the real DOM by libraries such as ReactDOM. This process is called Reconciliation.
+A virtual DOM object has the same properties as a real DOM object, but it lacks the real thing’s power to directly change what’s on the screen.
+Manipulating the DOM is slow. Manipulating the virtual DOM is much faster, because nothing gets drawn onscreen.
+
+# 21. How Virtual DOM works?
+
+When anything new is added to the application, a virtual DOM is created and it is represented as a tree.  
+Each element in the application is a node in this tree.  
+So, whenever there is a change in the state of any element, a new Virtual DOM tree is created.  
+This new Virtual DOM tree is then compared with the previous Virtual DOM tree and make a note of the changes.  
+After this, it finds the best possible ways to make these changes to the real DOM.  
+Now only the updated elements will get rendered on the page again.
+
+_In react_, everything is treated as a component be it a functional component or class component. A component can contain a state. Each time we change something in our JSX file or let’s put it in simple terms, whenever the state of any component is changed react updates its Virtual DOM tree. Though it may sound that it is ineffective but the cost is not much significant as updating the virtual DOM doesn’t take much time. React maintains two Virtual DOM at each time, one contains the updated Virtual DOM and one which is just the pre-update version of this updated Virtual DOM. Now it compares the pre-update version with the updated Virtual DOM and figures out what exactly has changed in the DOM like which components have been changed. This process of comparing the current Virtual DOM tree with the previous one is known as _‘diffing’_. Once React finds out what exactly has changed then it updated those objects only, on real DOM. React uses something called batch updates to update the real DOM. It just means that the changes to the real DOM are sent in batches instead of sending any update for a single change in the state of a component. We have seen that the re-rendering of the UI is the most expensive part and React manages to do this most efficiently by ensuring that the Real DOM receives batch updates to re-render the UI. This entire process of transforming changes to the real DOM is called _Reconciliation_
