@@ -90,7 +90,7 @@ Team defines the simplest task with story point = 1
 
 The "Testing Pyramid" is an industry-standard guideline for functional test case development.
 
-<img src = "./assets/images/testPyr.png'>
+<img src = "./assets/images/testPyr.png">
 
 # 10. Unit Tests
 
@@ -102,3 +102,29 @@ A typical unit test contains 3 phases:
 - it observes the resulting behavior.
 
 If the observed behavior is consistent with the expectations, the unit test passes, otherwise, it fails, indicating that there is a problem somewhere in the system under test. These three unit test phases are also known as Arrange, Act and Assert, or simply AAA.
+
+# 11. Design Patterns. Definition
+
+_Design patterns_ represent the best practices used by experienced object-oriented software developers.  
+_Design patterns_ are solutions to general problems that software developers faced during software development.  
+These solutions were obtained by trial and error by numerous software developers over quite a substantial period of time.
+
+# 12. Benefits of Patterns
+
+- Design patterns help you analyze the more abstract areas of a program by providing concrete, well-tested solutions.
+- Design patterns help you write code faster by providing a clearer picture of how you are implementing the design.
+- Design patterns encourage code reuse and accommodate change by supplying well-tested mechanisms for delegation and composition, and other non-inheritance based reuse techniques.
+- Design patterns encourage more legible and maintainable code by following well-understood paths.
+- Design patterns increasingly provide a common language and jargon for programmers.
+
+# 13. Creational Patterns
+
+These design patterns provide a way to create objects while hiding the creation logic, rather than instantiating objects directly using new operator. This gives program more flexibility in deciding which objects need to be created for a given use case.
+
+_Factory method_, _Abstract factory_, _builder_, _prototype_, _singlton_
+
+# 14. Behavioral Patterns
+
+These design patterns are specifically concerned with communication between objects.
+
+_Chain of responsibility_, _command_, _iterator_, _mediator_, _observer_, _state_, _strategy_, _visitor_
