@@ -62,3 +62,41 @@ At the end of every sprint, the team delivers a product increment that is potent
 - Customer collaboration over contract negotiation
 
 - Responding to change over following a plan
+
+# 6. Scrum Cycle
+
+<img src = './assets/images/scrum.png'>
+
+# 7. SCRUM Estimation
+
+The size of the Product Increment is estimated in terms of User Story Points. Once the size is determined, the effort is estimated by means of the past data, i.e., effort per User Story Point called Productivity.
+
+The Scrum Estimation of User Stories is in terms of the degree of difficulty for each of the User Stories. To assess the degree of difficulty, a particular scale is used.
+
+There are several types of scales that are used in Scrum Estimation. Following are some examples -
+
+- Numeric Sizing (1 through 10)
+- T-shirt Sizes (XS, S, M, L, XL XXL, XXXL)
+- Fibonacci Sequence (1, 2, 3, 5, 8, 13, 21, 34, etc.)
+- Dog Breeds (Chihuahua,………,Great Dane)
+
+The estimation technique is normally chosen in such a way that the entire scrum team is acquainted and comfortable with scale’s values. The most commonly used and most popular technique is Planning Poker which is based on Fibonacci sequence.
+
+# 8. How do you estimate a task?
+
+Team defines the simplest task with story point = 1
+
+# 9. Testing Pyramid
+
+The "Testing Pyramid" is an industry-standard guideline for functional test case development.
+
+# 10. Unit Tests
+
+_Unit test_ is a method that instantiates a small portion of our application and verifies its behavior independently from other parts.  
+A typical unit test contains 3 phases:
+
+- it initializes a small piece of an application it wants to test (also known as the system under test, or SUT),
+- it applies some stimulus to the system under test (usually by calling a method on it)
+- it observes the resulting behavior.
+
+If the observed behavior is consistent with the expectations, the unit test passes, otherwise, it fails, indicating that there is a problem somewhere in the system under test. These three unit test phases are also known as Arrange, Act and Assert, or simply AAA.
