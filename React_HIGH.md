@@ -467,11 +467,11 @@ Dispatching an action within a reducer is an anti-pattern. Your reducer should b
 
 # 47. Should I keep all component's state in Redux store?
 
-No. As usual - data from server, states that should be available on many places
+No. As usual - data from server or states that should be available in many places
 
 # 48. What is the proper way to access Redux store?
 
-**Connect with mapStateToProps, mapDispatchToProps** or **useSelector**
+Class components : **Connect with mapStateToProps, mapDispatchToProps** or FC : **useSelector**
 
 # 49. What is the purpose of the constants in Redux?
 
@@ -481,27 +481,10 @@ Types of action writes with constants allow us change them in one place without 
 
 Objects with key 'type' as required key. Other keys are optional
 
-# 51 What is React Router?
+# 51 What hooks does React Router (v6) have
 
-HIGH
+useHref, useInRouterContext, useLinkClickHandler, useLinkPressHandler, useLocation, useMatch, useNavigate, useNavigationType, useOutlet, useOutletContext, useParams, useResolvedPath, useRoutes, useSearchParams
 
-- What hooks does React Router have
-
-useHref
-useInRouterContext
-useLinkClickHandler
-useLinkPressHandler
-useLocation
-useMatch
-useNavigate
-useNavigationType
-useOutlet
-useOutletContext
-useParams
-useResolvedPath
-useRoutes
-useSearchParams
-
-- How React Router is different from history library?
+# 52 How React Router is different from history library?
 
 React Router is a wrapper around the history library which handles interaction with the browser's window.history with its browser and hash histories.
