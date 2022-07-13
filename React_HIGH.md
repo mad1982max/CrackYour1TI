@@ -441,7 +441,7 @@ To specify how the state tree is transformed by actions, you write pure reducers
 
 # 43. What are the downsides of Redux compared to Flux?
 
-<img src = './assets/images/flvsredux.png>
+<img src = './assets/images/flvsredux.png'>
 
 # 44. Can I dispatch an action in reducer?
 
@@ -486,7 +486,7 @@ Actions are plain JavaScript object that must have a type attribute to indicate 
 **v6**  
 useHref, useInRouterContext, useLinkClickHandler, useLinkPressHandler, useLocation, useMatch, useNavigate, useNavigationType, useOutlet, useOutletContext, useParams, useResolvedPath, useRoutes, useSearchParams
 
-**v5**
+**v5**  
 useHistory, useLocation, useParams, useRouteMatch
 
 # 52 How React Router is different from history library?
