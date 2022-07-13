@@ -249,3 +249,42 @@ The only thing which is common for both is that they help with performance issue
 | What It Is        | An API allowing developers to attach a “hidden” DOM to an element for encapsulation purposes               | An in-memory representation of the DOM                                                             |
 | Purpose           | Encapsulate logic and presentation inside an element, protecting it from effects from the rest of the page | Abstract the real DOM away, allowing for better performance and a more declarative style of coding |
 | Who Implements It | Browsers                                                                                                   | JavaScript libraries, such as React and Vue                                                        |
+
+# 23. What is React Fiber?
+
+_React Fiber_—the core algorithm behind React. React Fiber is the new reconciliation algorithm in React 16.
+
+# 24. What is the main goal of React Fiber?
+
+The main goals of the Fiber reconciler are incremental rendering, better or smoother rendering of UI animations and gestures, and responsiveness of the user interactions
+
+- Assign priority to different types of work
+- Pause work and come back to it later
+- Abort work if it’s no longer needed
+- Reuse previously completed work
+
+# 25. What is Lifting State Up in React?
+
+If several components need to reflect the same changing data, we can lifting the shared state up to their closest common ancestor.
+
+# 26. What are the different phases of component lifecycle?
+
+- Initializing
+
+This phase involves all the declarations, definitions, and initialization of properties, default props as well as the initial state of the component required by the developer. In a class-based component, this is implemented in the constructor of the component.
+
+- Mounting
+
+It commences when the component is positioned over the DOM container(meaning, an instance of the component is created and inserted into the DOM) and rendered on a webpage.
+
+- Updating
+
+It updates the states and properties that were declared and initialized during the initialization phase (if at all any changes are required). It is also responsible for handling user interaction and passing data within the component hierarchy. Unlike the initialization phase, this phase can be repeated multiple times. Some of the lifecycle methods falling into this category are as follows:
+
+- Unmounting
+
+This phase includes those lifecycle methods which are used when a component is getting detached from the DOM container(meaning, the instance of the component being destroyed and unmounted from the DOM). It is also responsible for performing the required cleanup tasks. Once unmounted, a component can not be re-mounted again.
+
+# 27. What are the lifecycle methods of React?
+
+<img src="/assets/images/lifecirleMethods.png">
