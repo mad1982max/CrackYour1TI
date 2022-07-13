@@ -120,3 +120,105 @@ handleClick = () => {
 ```html
 <button onClick={(event) => this.handleClick(event)}>{'Click me'}</button>
 ```
+
+# 13. How to pass a parameter to an event handler or callback?
+
+```jsx
+export function App(props) {
+  const click = (data, event) => {
+    console.log(data, event);
+  };
+  return (
+    <div className="App">
+      <button onClick={(e) => click("some data", e)}>click</button> //-1
+      <button onClick={click.bind(null, "some another data")}>click</button> //-2
+      <button onClick={(e) => click.call(null, "some another another data", e)}>click</button> //-3
+    </div>
+  );
+}
+```
+
+# 14. What are synthetic events in React?
+
+_Synthetic events_ - a cross-browser wrapper around the browser’s native event
+Helps to avoid creating multiple implementations for multiple methods for multiple browsers, creating common names for all events across browsers. Another benefit is that it increases the performance of the application as React reuses the event object.
+
+# 15. What is "key" prop and what is the benefit of using it in arrays of elements?
+
+A “key” is a special string attribute you need to include when creating lists of elements in React. Keys are used to React to identify which items in the list are changed, updated, or deleted.
+Should be Uniqueness of Keys
+
+# 16. What is the use of refs?
+
+**refs** are a way to access underlying DOM elements in a React component
+
+_Cases_ for using refs:
+
+- Managing focus, text selection, or media playback.
+- Triggering imperative animations.
+- Integrating with third-party DOM libraries.
+
+# 17. How to create refs?
+
+- React.createRef()
+
+```jsx
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.myRef = React.createRef();
+  }
+  render() {
+    return <div ref={this.myRef} />;
+  }
+}
+```
+
+- callback ref
+
+```jsx
+class SimpleCallbackRef extends Component {
+  onClick() {
+    this.inputRef.focus();
+  }
+
+  render() {
+    return (
+      <div>
+        <input
+          ref={(ref) => {
+            this.inputRef = ref;
+          }}
+        />
+        <button onClick={this.onClick.bind(this)}>Click to Focus</button>
+      </div>
+    );
+  }
+}
+```
+
+- Hooks useRef
+
+```jsx
+const RefsWithHooks = () => {
+  const inputRef = useRef(null);
+  return (
+    <div>
+      <input ref={inputRef} />
+      <button onClick={() => inputRef.current.focus()}>Click to Focus</button>
+    </div>
+  );
+};
+```
+
+# 18. React.memo VS useMemo
+
+**React.memo** is a higher-order component (or HOC for short) which accepts a react component and an optional function that uses props to conditionally update the component using memoization
+
+**useMemo** is a react hook that will accept a function and a dependency array and then memoize the value returned from the function passed into it.
+
+In useMemo it remembers the value returned between renders, and in React.memo it remembers the react component between renders.
+
+# 19. How do you memoize a component?
+
+**React.memo** is a higher-order component (or HOC for short) which accepts a react component and an optional function that uses props to conditionally update the component using memoization
