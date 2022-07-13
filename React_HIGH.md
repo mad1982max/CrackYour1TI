@@ -244,7 +244,7 @@ _In react_, everything is treated as a component be it a functional component or
 
 The only thing which is common for both is that they help with performance issues. Both create a separate instance of the Document Object Model; besides this, both concepts are different. Virtual DOM is creating a copy of the whole DOM object, and Shadow DOM creates small pieces of the DOM object which has their own, isolated scope for the element they represent.
 
-| Shadow DOM        | Virtual DOM                                                                                                |
+|                   | Shadow DOM                                                                                                 | Virtual DOM                                                                                        |
 | ----------------- | ---------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | What It Is        | An API allowing developers to attach a “hidden” DOM to an element for encapsulation purposes               | An in-memory representation of the DOM                                                             |
 | Purpose           | Encapsulate logic and presentation inside an element, protecting it from effects from the rest of the page | Abstract the real DOM away, allowing for better performance and a more declarative style of coding |
