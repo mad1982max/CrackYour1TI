@@ -481,9 +481,9 @@ Types of action writes with constants allow us change them in one place without 
 
 Actions are plain JavaScript object that must have a type attribute to indicate the type of action performed. It tells us what had happened. Types should be defined as string constants. Other keys - are optional.
 
-# 51 What hooks does React Router (v6) have
+# 51 What hooks does React Router have?
 
-**v6**
+**v6**  
 useHref, useInRouterContext, useLinkClickHandler, useLinkPressHandler, useLocation, useMatch, useNavigate, useNavigationType, useOutlet, useOutletContext, useParams, useResolvedPath, useRoutes, useSearchParams
 
 **v5**
