@@ -288,3 +288,166 @@ This phase includes those lifecycle methods which are used when a component is g
 # 27. What are the lifecycle methods of React?
 
 <img src="/assets/images/lifecirleMethods.png">
+
+- 28. What are Higher-Order components?
+
+a higher-order component is a function that takes a component and returns a new component.
+
+- 29. How to fetch data with React Hooks?
+
+useEffect + useState or combine them to custom hook
+
+- 30. What is context?
+
+Context provides a way to pass data through the component tree without having to pass props down manually at every level.
+
+- 31. What is children prop?
+
+It is used to display whatever you include between the opening and closing tags when invoking a component.
+
+- 32 What is reconciliation?
+
+Reconciliation is the process through which React updates the Browser DOM
+
+- 33.How do you conditionally render components?
+
+```jsx
+if (isLoggedIn) {
+  return <UserGreeting />;
+}
+```
+
+```jsx
+return (
+    <div>
+      The user is <b>{isLoggedIn ? 'currently' : 'not'}</b> logged in.
+    </div>
+```
+
+```jsx
+return <div>{count && <h1>Messages: {count}</h1>}</div>;
+```
+
+- 34. What are error boundaries in React v16
+
+**Error boundaries** are React components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI
+
+Error boundaries _do not catch errors_ for:
+
+- Event handlers (learn more)
+- Asynchronous code (e.g. setTimeout or requestAnimationFrame callbacks)
+- Server side rendering
+- Errors thrown in the error boundary itself (rather than its children)
+
+```jsx
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error) {
+    // Update state so the next render will show the fallback UI.
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    // You can also log the error to an error reporting service
+    logErrorToMyService(error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return <h1>Something went wrong.</h1>;
+    }
+
+    return this.props.children;
+  }
+}
+```
+
+- 35. What are hooks?
+
+Let you use state and other React features without writing a class
+
+- 36. React hooks rules
+
+* Only Call Hooks at the Top Level
+
+Don’t call Hooks inside loops, conditions, or nested functions
+
+- Only Call Hooks from React Functions
+
+37. What are fragments?
+    Allow create parent component
+
+47
+Why fragments are better than container divs?
+
+React Redux
+HIGH
+
+51
+What is Flux?
+HIGH
+
+52
+What is Redux?
+HIGH
+
+52.1
+What hooks does Redux have
+HIGH
+
+53
+What are the core principles of Redux?
+HIGH
+
+- What are the downsides of Redux compared to Flux?
+
+<img src = './assets/images/flvsredux.png>
+
+- Can I dispatch an action in reducer?
+  Dispatching an action within a reducer is an anti-pattern. Your reducer should be without side effects, simply digesting the action payload and returning a new state object. Adding listeners and dispatching actions within the reducer can lead to chained actions and other side effects.
+
+58
+How to access Redux store outside a component?
+HIGH
+
+65
+What is the difference between React context and React Redux?
+HIGH
+
+68
+Should I keep all component's state in Redux store?
+HIGH
+
+69
+What is the proper way to access Redux store?
+HIGH
+
+71
+What is the purpose of the constants in Redux?
+HIGH
+
+88
+What is an action in Redux?
+HIGH
+
+React Router
+HIGH
+
+89
+What is React Router?
+HIGH
+
+- What hooks does React Router have
+
+useHistory
+useParams
+useLocation
+useRouteMatch
+
+- How React Router is different from history library?
+
+React Router is a wrapper around the history library which handles interaction with the browser's window.history with its browser and hash histories.
