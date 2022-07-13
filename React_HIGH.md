@@ -479,12 +479,16 @@ Types of action writes with constants allow us change them in one place without 
 
 # 50. What is an action in Redux?
 
-Objects with key 'type' as required key. Other keys are optional
+Actions are plain JavaScript object that must have a type attribute to indicate the type of action performed. It tells us what had happened. Types should be defined as string constants. Other keys - are optional.
 
 # 51 What hooks does React Router (v6) have
 
+**v6**
 useHref, useInRouterContext, useLinkClickHandler, useLinkPressHandler, useLocation, useMatch, useNavigate, useNavigationType, useOutlet, useOutletContext, useParams, useResolvedPath, useRoutes, useSearchParams
+
+**v5**
+useHistory, useLocation, useParams, useRouteMatch
 
 # 52 How React Router is different from history library?
 
-React Router is a wrapper around the history library which handles interaction with the browser's window.history with its browser and hash histories.
+React Router is a wrapper around the history library which handles interaction with the browser's _window.history_ with its browser and hash histories.
