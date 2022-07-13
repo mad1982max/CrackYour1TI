@@ -154,3 +154,19 @@ A client should never be forced to implement an interface that it doesn’t use 
 **D:** Dependency Inversion Principle
 
 Entities must depend on abstractions not on concretions. It states that the high level module must not depend on the low level module, but they should depend on abstractions.
+
+# 16. CI/CD/CD
+
+Continuous integration (CI) and continuous delivery & Continuous deployment (CD) are essential terms that are used in DevOps and encompass a set of practices that enable modern development teams to deliver code changes more frequently and quickly.
+
+CI/CD/CD represent the process of continuous development, testing and delivery of new releases.
+
+<img src = './assets/images/ci_cd.png' />
+
+Three main concepts:
+
+**Continuous integration (CI)**- short-lived branches that are merged into a shared trunk several times a day where a series of automated tests give feedback about the changes introduced
+
+**Continuous delivery (CD)**- after continuous integration, continuous delivery prepares the software for delivery; deployment to production is usually manual
+
+**Continuous deployment**- after CI and CD, changes are automatically deployed into production; fully automated process
