@@ -90,6 +90,8 @@ Team defines the simplest task with story point = 1
 
 The "Testing Pyramid" is an industry-standard guideline for functional test case development.
 
+<img src = "./assets/images/testPyr.png'>
+
 # 10. Unit Tests
 
 _Unit test_ is a method that instantiates a small portion of our application and verifies its behavior independently from other parts.  
