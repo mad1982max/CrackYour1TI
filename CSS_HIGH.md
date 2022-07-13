@@ -249,34 +249,7 @@ Animations on the HTML elements with CSS can be achieved by using _CSS Transitio
 
 **CSS Transitions** use css property _'transition'_ and set delay of the animation , duration, name of the animated property and timing function.
 
-```css
-.some-class {
-  transition: width 1s linear 1s;
-}
-```
-
 **CSS Animations** use _@keyframes_ rule where we can define list of css styles in certain point of animation
-
-```css
-@keyframes some-animation {
-  0% {
-    background-color: green;
-    width: 200px;
-  }
-  50% {
-    background-color: black;
-    width: 250px;
-  }
-  75% {
-    background-color: red;
-    width: 300px;
-  }
-  100% {
-    background-color: orange;
-    width: 350px;
-  }
-}
-```
 
 Animation via CSS are used
 
