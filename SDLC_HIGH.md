@@ -105,8 +105,10 @@ If the observed behavior is consistent with the expectations, the unit test pass
 
 # 11. Design Patterns. Definition
 
-_Design patterns_ represent the best practices used by experienced object-oriented software developers.  
-_Design patterns_ are solutions to general problems that software developers faced during software development.  
+_Design patterns_ represent the best practices used by experienced object-oriented software developers.
+
+_Design patterns_ are solutions to general problems that software developers faced during software development.
+
 These solutions were obtained by trial and error by numerous software developers over quite a substantial period of time.
 
 # 12. Benefits of Patterns
@@ -119,7 +121,9 @@ These solutions were obtained by trial and error by numerous software developers
 
 # 13. Creational Patterns
 
-These design patterns provide a way to create objects while hiding the creation logic, rather than instantiating objects directly using new operator. This gives program more flexibility in deciding which objects need to be created for a given use case.
+These design patterns provide a way to create objects while hiding the creation logic, rather than instantiating objects directly using new operator.
+
+This gives program more flexibility in deciding which objects need to be created for a given use case.
 
 _Factory method_, _Abstract factory_, _builder_, _prototype_, _singlton_
 
