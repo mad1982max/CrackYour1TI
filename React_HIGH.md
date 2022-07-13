@@ -289,27 +289,31 @@ This phase includes those lifecycle methods which are used when a component is g
 
 <img src="/assets/images/lifecirleMethods.png">
 
-- 28. What are Higher-Order components?
+# 28. What are Higher-Order components?
 
-a higher-order component is a function that takes a component and returns a new component.
+**HOC** is a function that takes a component and returns a new component.
 
-- 29. How to fetch data with React Hooks?
+# 29. How to fetch data with React Hooks?
 
 useEffect + useState or combine them to custom hook
 
-- 30. What is context?
+# 30. What is context?
 
 Context provides a way to pass data through the component tree without having to pass props down manually at every level.
 
-- 31. What is children prop?
+# 31. What is children prop?
 
 It is used to display whatever you include between the opening and closing tags when invoking a component.
 
-- 32 What is reconciliation?
+# 32 What is reconciliation?
 
 Reconciliation is the process through which React updates the Browser DOM
 
-- 33.How do you conditionally render components?
+_With details_:
+
+A component can contain a state. Each time we change something in our JSX file or let’s put it in simple terms, whenever the state of any component is changed react updates its Virtual DOM tree. Though it may sound that it is ineffective but the cost is not much significant as updating the virtual DOM doesn’t take much time. React maintains two Virtual DOM at each time, one contains the updated Virtual DOM and one which is just the pre-update version of this updated Virtual DOM. Now it compares the pre-update version with the updated Virtual DOM and figures out what exactly has changed in the DOM like which components have been changed. This process of comparing the current Virtual DOM tree with the previous one is known as _‘diffing’_. Once React finds out what exactly has changed then it updated those objects only, on real DOM. React uses something called batch updates to update the real DOM. It just means that the changes to the real DOM are sent in batches instead of sending any update for a single change in the state of a component. We have seen that the re-rendering of the UI is the most expensive part and React manages to do this most efficiently by ensuring that the Real DOM receives batch updates to re-render the UI. This entire process of transforming changes to the real DOM is called _Reconciliation_
+
+# 33.How do you conditionally render components?
 
 ```jsx
 if (isLoggedIn) {
@@ -328,7 +332,7 @@ return (
 return <div>{count && <h1>Messages: {count}</h1>}</div>;
 ```
 
-- 34. What are error boundaries in React v16
+# 34. What are error boundaries in React v16
 
 **Error boundaries** are React components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI
 
@@ -366,87 +370,137 @@ class ErrorBoundary extends React.Component {
 }
 ```
 
-- 35. What are hooks?
+# 35. What are hooks?
 
-Let you use state and other React features without writing a class
+Let us use state and other React features without writing a class
 
-- 36. React hooks rules
+# 36. React hooks rules
 
-* Only Call Hooks at the Top Level
+- Only Call Hooks at the Top Level
 
 Don’t call Hooks inside loops, conditions, or nested functions
 
 - Only Call Hooks from React Functions
 
-37. What are fragments?
-    Allow create parent component
+# 37. What are fragments?
 
-47
-Why fragments are better than container divs?
+_Fragments_ are syntax that allow us to add multiple elements to a React component without wrapping them in an extra DOM node.
 
-React Redux
-HIGH
+# 38. Why fragments are better than container divs?
 
-51
-What is Flux?
-HIGH
+Allow us to add multiple elements to a React component without wrapping them in an extra DOM node.
 
-52
-What is Redux?
-HIGH
+# 39. What is Flux?
 
-52.1
-What hooks does Redux have
-HIGH
+_Flux_ is an architectural pattern proposed by Facebook for building SPAs.
 
-53
-What are the core principles of Redux?
-HIGH
+It suggests to split the application into the following parts:
 
-- What are the downsides of Redux compared to Flux?
+- Stores
+- Dispatcher
+- Views
+- Action / Action Creators
+
+_Flux flow_
+
+<img src = "./assets/images/flux-flow.png />
+
+**Pros**
+Flux architecture is better in an application where views don’t map directly to domain stores. To put in a different way, when views can create actions that will update many stores and stores can trigger changes that will update many views.
+
+Actions can be persisted and then replayed.
+
+**Cons**
+Flux can add unnecessary complexity to an application where each view maps to one store. In this kind of application a separation between view and store is enough.
+
+# 40. What is Redux?
+
+_Redux_ is a predictable state container for JavaScript apps. As the application grows, it becomes difficult to keep it organized and maintain data flow. Redux solves this problem by managing application’s state with a single global object called Store. Redux fundamental principles help in maintaining consistency throughout your application, which makes debugging and testing easier.
+
+_Flow_
+
+<img src = "./assets/images/redux.png" />
+
+# 41. What hooks does Redux have
+
+useSelector, useDispatch, useStore
+
+# 42. What are the core principles of Redux?
+
+- Single source of truth
+
+The global state of your application is stored in an object tree within a single store.
+
+- State is read-only
+
+The only way to change the state is to emit an action, an object describing what happened.
+
+- Changes are made with pure functions
+
+To specify how the state tree is transformed by actions, you write pure reducers.
+
+# 43. What are the downsides of Redux compared to Flux?
 
 <img src = './assets/images/flvsredux.png>
 
-- Can I dispatch an action in reducer?
-  Dispatching an action within a reducer is an anti-pattern. Your reducer should be without side effects, simply digesting the action payload and returning a new state object. Adding listeners and dispatching actions within the reducer can lead to chained actions and other side effects.
+# 44. Can I dispatch an action in reducer?
 
-58
-How to access Redux store outside a component?
-HIGH
+Dispatching an action within a reducer is an anti-pattern. Your reducer should be without side effects, simply digesting the action payload and returning a new state object. Adding listeners and dispatching actions within the reducer can lead to chained actions and other side effects.
 
-65
-What is the difference between React context and React Redux?
-HIGH
+# 45 How to access Redux store outside a component?
 
-68
-Should I keep all component's state in Redux store?
-HIGH
+- Export the Store
+- Access Redux State from a Thunk
+- Use Middleware and Intercept an Action
+- Pass the Value From a React Component
 
-69
-What is the proper way to access Redux store?
-HIGH
+# 46. What is the difference between React context and React Redux?
 
-71
-What is the purpose of the constants in Redux?
-HIGH
+| Context API                                                                         | Redux                                                                                |
+| ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| Built-in tool that ships with React                                                 | Additional installation Required, driving up the final bundle size                   |
+| Requires minimal Setup                                                              | Requires extensive setup to integrate it with a React Application                    |
+| Specifically designed for static data, that is not often refreshed or updated       | Works like a charm with both static and dynamic data                                 |
+| Adding new contexts requires creation from scratch                                  | Easily extendible due to the ease of adding new data/actions after the initial setup |
+| Debugging can be hard in highly nested React Component Structure even with Dev Tool | Incredibly powerful Redux Dev Tools to ease debugging                                |
+| UI logic and State Management Logic are in the same component                       | Better code organization with separate UI logic and State Management Logic           |
 
-88
-What is an action in Redux?
-HIGH
+# 47. Should I keep all component's state in Redux store?
 
-React Router
-HIGH
+No. As usual - data from server, states that should be available on many places
 
-89
-What is React Router?
+# 48. What is the proper way to access Redux store?
+
+**Connect with mapStateToProps, mapDispatchToProps** or **useSelector**
+
+# 49. What is the purpose of the constants in Redux?
+
+Types of action writes with constants allow us change them in one place without grammatical errors
+
+# 50. What is an action in Redux?
+
+Objects with key 'type' as required key. Other keys are optional
+
+# 51 What is React Router?
+
 HIGH
 
 - What hooks does React Router have
 
-useHistory
-useParams
+useHref
+useInRouterContext
+useLinkClickHandler
+useLinkPressHandler
 useLocation
-useRouteMatch
+useMatch
+useNavigate
+useNavigationType
+useOutlet
+useOutletContext
+useParams
+useResolvedPath
+useRoutes
+useSearchParams
 
 - How React Router is different from history library?
 
