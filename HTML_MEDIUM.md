@@ -13,7 +13,7 @@
 - 11. Reduce the Number of Plugins
 - 12. Use Website Caching
 
-# 2. What does async and defer refer in script tag? Describe the difference between <script>, <script async> and <script defer>
+# 7. What does async and defer refer in script tag? Describe the difference between <script>, <script async> and <script defer>
 
 - **script**
 
@@ -26,3 +26,23 @@
 - **script defer**
 
 <img src = './assets/images/defer.png' />
+
+# 18. What is an iframe and how it works?
+
+The **"iframe"** tag defines a rectangular region within the document in which the browser can display a separate document, including scrollbars and borders.
+
+The iframe is basically used to show a webpage (videos, maps, presentations) inside the current web page. The "src" attribute is used to specify the URL of the document that occupies the iframe.
+
+```html
+<iframe src="https://someDoc.html" height="200" width="400" loading="lazy"> </iframe>
+```
+
+# 19 Explain the use of rel="nofollow", rel="noreferrer", rel="noopener" attribute?
+
+**rel** attribute specifies the relationship between the current document and the linked document.
+
+**The noreferrer** is rel attribute of the <a>, <area>, and <form> elements instructs the browser, when navigating to the target resource, to omit the Referer header and otherwise leak no referrer information — and additionally to behave as if the noopener keyword were also specified.
+
+**The noopener** is rel attribute of the <a>, <area>, and <form> elements instructs the browser to navigate to the target resource without granting the new browsing context access to the document that opened it — by not setting the _Window.opener_ property on the opened window (it returns null).
+
+**The nofollow** keyword tells search engine spiders to ignore the link relationship.
