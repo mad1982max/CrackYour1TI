@@ -62,7 +62,8 @@ console.log(Object.entries(object));
 
 # 6. How can you get the list of keys of any object?
 
-**Object.keys(object)**
+- _Object.keys(object)_
+- _for in_ and push to array
 
 # 7. What is a WeakSet?
 
@@ -118,3 +119,90 @@ wm.has(obj); // false
 | Any value as a key                                                               | only object as a key |
 | A Map object iterates entries, keys, and values in the order of entry insertion. | is not enumerable    |
 | strong references                                                                | weak references      |
+
+# 11. Why do you need JSON?
+
+**JSON** (JavaScript Object Notation)
+
+- is a text format
+- data can easily be sent between computers
+- JSON can be used by any programming language.
+
+# 12. What is the purpose of the array slice method?
+
+**The slice() method** returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included) where start and end represent the index of items in that array. The original array will not be modified.
+
+**Syntax**
+
+- slice()
+- slice(start)
+- slice(start, end)
+
+# 13. What is the purpose of the array splice method?
+
+**The splice() method** changes the contents of an array by removing or replacing existing elements and/or adding new elements in place
+
+**Syntax**
+
+- splice(start)
+- splice(start, deleteCount)
+- splice(start, deleteCount, item1)
+- splice(start, deleteCount, item1, item2, itemN)
+
+# 14. What is a first class function?
+
+-N/A-
+What is a first class function?
+MEDIUM
+
+-N/A-
+What is a first order function?
+MEDIUM
+
+-N/A-
+What is a higher order function?
+MEDIUM
+
+-N/A-
+What is a unary function?
+MEDIUM
+
+-N/A-
+What is the currying function?
+MEDIUM
+
+-N/A-
+What is an anonymous function?
+MEDIUM
+
+-N/A-
+What is promise.all?
+MEDIUM
+
+-N/A-
+What is the purpose of race method in promise?
+MEDIUM
+
+-N/A-
+What is a strict mode in javascript?
+MEDIUM
+
+-N/A-
+What are PWAs?
+MEDIUM
+
+-N/A-
+How do you get the current url with javascript?
+MEDIUM
+
+-N/A-
+What is memoization?
+MEDIUM
+
+-N/A-
+How do you encode an URL?
+MEDIUM
+
+-N/A-
+How do you decode an URL?
+MEDIUM
