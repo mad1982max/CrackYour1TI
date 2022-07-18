@@ -45,3 +45,9 @@ _Main features:_
 - Modularity
 - Reusability
 - Structure
+
+# 5. Explain the CSS “box model” and the layout components that it consists of
+
+_The CSS box model_ is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content.
+
+<img src = "./assets/images/box-model.png" />
