@@ -43,6 +43,21 @@ Falsy value
 _null_ - “nothing”, “empty” or “value unknown”  
 _undefined_ - variable is declared, but value is not assigned
 
+```js
+null == undefined; // true
+null === undefined; // false
+```
+
+```js
+typeof undefined; //“undefined”
+typeof null; //“object”
+```
+
+```js
+undefined + 1; // NaN
+null + 1; // 1
+```
+
 Both are _falsy_ values  
 To separate null and undefined from other falsy value we can use _Nullish coalescing operator (??)_
 
@@ -168,9 +183,8 @@ function hello() {
 # 14. How do you assign default values to variables?
 
 ```js
-const a = 100;
 const b = a || 1000;
-//or
+//or (if a - 'null/undefined')
 const b = a ?? 1000;
 ```
 
@@ -239,8 +253,8 @@ It allows you to create functions in a cleaner way compared to regular functions
 let x = (x, y) => x * y;
 ```
 
-- Arrow function does not have its own **this**. _This_ refers to its parent scope.
-- Arrow functions don't have pseudo array **arguments**. We should use _spread_ operator to receive all parameters
+- in the arrow function, the _this_, _arguments_, _super_, _new.target_ are lexical. It means that the arrow function uses these variables (or constructs) from the enclosing lexical scope.
+- arrow function _cannot be used as a function constructor_. If you use the new keyword to create a new object from an arrow function, you will get an error.
 
 # 24. What is a pure function?
 
@@ -322,7 +336,8 @@ promise
 
 # 29. Why do you need a promise?
 
-To avoid _callback hell_ : callback nesting
+- To avoid _callback hell_ : callback nesting
+- One of the powerful APIs that help us to do Async operations
 
 # 30. What are the states of promise?
 

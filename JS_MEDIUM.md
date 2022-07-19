@@ -151,58 +151,93 @@ wm.has(obj); // false
 
 # 14. What is a first class function?
 
--N/A-
-What is a first class function?
-MEDIUM
+A programming language is said to have **First-class functions** when functions in that language are treated like any other variable. For example, in such a language, a function can be passed as an argument to other functions, can be returned by another function and can be assigned as a value to a variable.
 
--N/A-
-What is a first order function?
-MEDIUM
+# 15. What is a higher order function?
 
--N/A-
-What is a higher order function?
-MEDIUM
+**Higher-Order Function**: A function that receives another function as an argument or that returns a new function or both is called Higher-order functions. Higher-order functions are only possible because of the First-class function.
 
--N/A-
-What is a unary function?
-MEDIUM
+# 16. What is a unary function?
 
--N/A-
-What is the currying function?
-MEDIUM
+A unary function is a function that takes one argument.
 
--N/A-
-What is an anonymous function?
-MEDIUM
+# 17. What is the currying function?
 
--N/A-
-What is promise.all?
-MEDIUM
+**Currying** is a transformation of functions that translates a function from callable as f(a, b, c) into callable as f(a)(b)(c).
 
--N/A-
-What is the purpose of race method in promise?
-MEDIUM
+# 18. What is an anonymous function?
 
--N/A-
-What is a strict mode in javascript?
-MEDIUM
+- Anonymous functions are functions without names.
+- Anonymous functions can be used as an argument to other functions or as an immediately invoked function execution.
 
--N/A-
-What are PWAs?
-MEDIUM
+# 19. What is promise.all?
 
--N/A-
-How do you get the current url with javascript?
-MEDIUM
+The **Promise.all()** method is actually a method of Promise object, that takes an _array of promises_(an iterable) as an input. It returns a _single Promise_ that resolves when _all_ of the promises passed as an iterable, which have resolved or when the iterable contains no promises.
 
--N/A-
-What is memoization?
-MEDIUM
+If any of the passed-in promises reject, the Promise.all() method asynchronously rejects the value of the promise that already rejected, whether or not the other promises have resolved.
 
--N/A-
-How do you encode an URL?
-MEDIUM
+# 20. What is the purpose of race method in promise?
 
--N/A-
-How do you decode an URL?
-MEDIUM
+The **Promise.race()** method returns a promise that fulfills or rejects as soon as one of the promises in an iterable array is fulfilled or rejected. This array of promises is passed as an argument to the method.
+
+# 21. What is a strict mode in javascript?
+
+**'use strict'** syntax shows that the code should be executed in 'strict mode'.
+
+_Some features_:
+
+- Undeclared variable is not allowed.
+- Undeclared objects are not allowed.
+- Deleting an object is not allowed.
+- Duplicating a parameter name is not allowed.
+- Assigning to a non-writable property is not allowed.
+- Assigning to a getter-only property is not allowed.
+- Assigning to a new property on a non-extensible object is not allowed.
+- Octal syntax is not allowed.
+- The variable name arguments and eval (reserved words) are not allowed.
+
+_Benefits_ of Strict Mode:
+
+- helps to write a cleaner code
+- changes previously accepted silent errors (bad syntax) into real errors and throws an error message
+- makes it easier to write "secure" JavaScript
+
+# 22. What are PWAs?
+
+_Progressive Web Application (PWA)_ is a type of web app that can operate both as a web page and mobile app on any device
+
+| Characteristic      | Description                                                               |
+| ------------------- | ------------------------------------------------------------------------- |
+| Discoverable        | The app is discoverable from web search results and supporting app stores |
+| Installable         | Pin and launch the app from the home screen, Start menu, and Taskbar      |
+| Re-engageable       | The app can receive push notifications, even when the app isn't active    |
+| Network-independent | The app works offline and in low-network conditions                       |
+| Progressive         | The user experience of the app scales up or down with device capabilities |
+| Safe                | The app provides a secure HTTPS endpoint and other user safeguards        |
+| Responsive          | The app adapts to the user's screen size or orientation and input method  |
+| Linkable            | Share and launch the app from a standard link                             |
+
+# 23 How do you get the current url with javascript?
+
+**window.location.href**
+
+# 24 What is memoization?
+
+**memoization** is an optimization technique:
+
+- store computation results in cache
+- retrieving that same information from the cache the next time it's needed instead of computing it again
+
+# 25 How do you encode an URL?
+
+Allows you to safety transfer data in the URL
+
+_encodeURIComponent()_
+
+# 26 How do you decode an URL?
+
+_decodeURIComponent()_
+
+# 27 What is a first order function?
+
+??????
