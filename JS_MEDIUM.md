@@ -240,4 +240,4 @@ _decodeURIComponent()_
 
 # 27 What is a first order function?
 
-??????
+Opposite to HOF
