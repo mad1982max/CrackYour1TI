@@ -13,16 +13,15 @@ React can be used as a base in the development of single-page, mobile, or server
 - Conditional statements
 - Components
 - Simplicity
+- SSR support
 
 # 3. What is JSX?
 
-JSX is an extension of the JavaScript language based on ES6, and is translated into regular JavaScript at runtime.
-JSX allows us to write HTML in React.
-JSX converts HTML tags into react elements.
+JSX is a JavaScript Extension Syntax used in React to easily write HTML and JavaScript together.
 
 _Flow:_
 
-JSX => transpiler (BIBEL) => React.createElement function
+**JSX** => transpiler (**BIBEL**) => **React.createElement** function
 
 # 4. Is it possible to use react without JSX?
 
@@ -443,6 +442,26 @@ To specify how the state tree is transformed by actions, you write pure reducers
 
 <img src = './assets/images/flvsredux.png'>
 
+Difference between Redux and Flux:
+
+| Redux                                                            | Flux                                                                  |
+| ---------------------------------------------------------------- | --------------------------------------------------------------------- |
+| It was developed by Dan Abramov & Andrew Clark                   | It was developed by Facebook                                          |
+| It is an Open-source JavaScript library used for creating the UI | It is Application architecture designed to build client-side web apps |
+| Does not have any dispatcher                                     | Has a single dispatcher                                               |
+| Has only a single store in the application                       | Has multiple stores in one application                                |
+| Data logics are in the reducers                                  | Data logic is in store                                                |
+| Store’s state cannot be mutable                                  | Store’s state can be mutable                                          |
+| <img src = "./assets/images/redux_arch.png" />                   | <img src = "./assets/images/flux_arch.png" />                         |
+
+**Cons of Redux:**
+
+- Lack of Encapsulation.
+- Restricted Design.
+- Excessive Memory Use.
+- Increased Complexity.
+- Time-Consuming.
+
 # 44. Can I dispatch an action in reducer?
 
 Dispatching an action within a reducer is an anti-pattern. Your reducer should be without side effects, simply digesting the action payload and returning a new state object. Adding listeners and dispatching actions within the reducer can lead to chained actions and other side effects.
@@ -492,3 +511,7 @@ useHistory, useLocation, useParams, useRouteMatch
 # 52 How React Router is different from history library?
 
 React Router is a wrapper around the history library which handles interaction with the browser's _window.history_ with its browser and hash histories.
+
+# 53 What is react router?
+
+Additional library (_react-router-dom_) that helps to create an application with multiple page routes

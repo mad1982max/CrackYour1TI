@@ -109,29 +109,14 @@ which define page's dimensions and scaling
 
 # 5. What are the building blocks of HTML5?
 
-- _Tag_ - wrapper for content. Should be write between ** < ** and ** > **
-  Exists 2 type of tags:
-  - with closing pair
-  ```html
-  <div>Some content</div>
-  ```
-  - self-closing
-  ```html
-  <img src="some url" alt="some text" />
-  ```
-- _Attribute_ - some additional info for tag. Consist from _key_ and _value_ applied with the starting tag
-
-```html
-<div class="alert">Some content</div>
-```
-
-But exists attributes that can be wrote without _value_ (value are 'true' by default)
-
-```html
-  <button disabled>Push me</div>
-```
-
-- _Element_ = Open Tag with attributes + Content + Closing tag
+- _Semantics_: allowing you to describe more precisely what your content is.
+- _Connectivity_: allowing you to communicate with the server in new and innovative ways.
+- _Offline and storage_: allowing webpages to store data on the client-side locally and operate offline more efficiently.
+- _Multimedia_: making video and audio first-class citizens in the Open Web.
+- _2D/3D graphics and effects_: allowing a much more diverse range of presentation options.
+- _Performance and integration_: providing greater speed optimization and better usage of computer hardware.
+- _Device access_: allowing for the usage of various input and output devices.
+- _Styling_: letting authors write more sophisticated themes.
 
 # 6. What are the semantic tags available in html5?
 
@@ -171,6 +156,7 @@ Main purposes:
 
 - improve _SEO_ by providing proper description of image for relevant ranking in web
 - provide _people with disabilities_ with best user experience when they use screen readers or other devices
+- in case of bad connection helps us to understand what was on image
 
 # 10. Define semantic markup. What are the semantic meanings for _section_, _article_, _aside_, _nav_, _header_, <footer> and when/how should each be used in structuring html markup?
 
