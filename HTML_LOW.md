@@ -42,3 +42,44 @@ Browser draws element to the screen in the correct order so the page renders cor
 | User has to scan a long list so as to select an option | User can easily input the option and get the hints and then can be chosen by the user |
 | User can be restricted to a list of options            | User is not restricted by the list of options                                         |
 | It doesn’t provide the auto-complete feature           | It provides the auto-complete feature                                                 |
+
+# 5. What is the difference between class selectors and id selectors?
+
+**ID** can be used to identify one element, whereas a **class** can be used to identify more than one
+
+# 6. What is the difference between the “nth-child()” and “nth-of-type()” selectors?
+
+```html
+<div>
+  <h1>Title</h1>
+
+  <p>Paragraph 1</p>
+
+  <p>Paragraph 2</p>
+</div>
+```
+
+**_Paragraph 1_**
+
+```css
+p:nth-child(2) {
+  /* ....; */
+}
+```
+
+**_Paragraph 2_**
+
+```css
+p:nth-of-type {
+  /* ....; */
+}
+```
+
+# 7. How do you specify units in the CSS?
+
+- Absolute (px, pc,pt, ...)
+- Relative (em, rem, %, vh, vw, vmin, vmax)
+
+# 8. What is the difference between RGBa, HEX and HSLa?
+
+- RGBa, HSLa - have alpha channel
