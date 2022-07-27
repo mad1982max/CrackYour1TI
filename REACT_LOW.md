@@ -47,3 +47,62 @@ export default class MyApp extends React.Component {
 ```jsx
 export default connect(mapStateToProps, mapDispatchToProps)(MyApp);
 ```
+
+# 8. What is redux-saga?
+
+Middleware library that helps us with API calls or side effects.
+Build using _generators_
+
+# 9. What is the mental model of redux-saga?
+
+<img src ='./assets/images/saga-mental.png'>
+
+# 10. What are the differences between call and put in redux-saga
+
+- _call()_ function is used to create effect description, which instructs middleware to call the promise.
+
+- _put()_ function creates an effect, which instructs middleware to dispatch an action to the store.
+
+# 11. What are the differences between redux-saga and redux-thunk
+
+| Redux-Thunk                                   | Redux-Saga                                                                                                      |
+| --------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| Less boilerplate code                         | More boilerplate code                                                                                           |
+| Easy to understand as compared to redux-saga  | Difficult to understand as there are multiple concepts to learn like generator functions and redux-saga effects |
+| May be difficult to scale up                  | Easy to scale as compared to redux-thunk                                                                        |
+| Action creators may hold too much async logic | Action creators stay pure                                                                                       |
+| May get difficult to test                     | Comparatively easy to test as all your async logic remains together                                             |
+
+# 12. What is Redux DevTools?
+
+Redux DevTools is used for debugging application's state changes
+
+# 13. What are the features of Redux DevTools?
+
+- inspect every state and action payload.
+- go back in time by cancelling actions.
+- if change the reducer code, each staged action will be re-evaluated.
+- if the reducers throw, we will see during which action this happened, and what the error was.
+
+# 14. What are Redux selectors and Why to use them?
+
+access to state fields
+
+# 15. What is Redux Form?
+
+Manager form state in Redux
+
+# 16. What are the main features of Redux Form?
+
+- Field values persistence via Redux store.
+- Validation (sync/async) and submission.
+- Formatting, parsing and normalization of field values.
+
+# 17. How to add multiple middlewares to Redux?
+
+const store = createStore(reducer, applyMiddleware(mw1, mv2, ...));
+
+# 18 How Relay is different from Redux?
+
+- manages state originated from the server
+- all access to the state is used via GraphQL querys (for reading data) and mutations (for changing data)
