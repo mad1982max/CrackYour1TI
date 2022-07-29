@@ -206,7 +206,8 @@ Middleware for async action
 
 # 26. How to set initial state in Redux?
 
-Assign default value (initial state) to reducer's first parameter (store)
+- Assign default value (initial state) to reducer's first parameter (store)
+- Pass an initialState as a second argument to createStore()
 
 # 27. What are the <Router> components of React Router (v.5)?
 

@@ -16,12 +16,15 @@ const obj = {
 - Using Object.create()
 - Using Object.assign()
 - ES6 classes
+- var object = new (function(){ this.name="John";})();
 
 # 2. What are the problems with global variables?
 
 | Conflicts                                                                                                                                                                                           | Performance                                                                                                                                                                                       |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Global variables are in danger of being overridden by your own code as your code base grows, or by any framework or plugin you may use. This can easily introduce bugs that are hard to track down. | When your code reference a variable it is faster for the script engine to search a limited scope instead of traversing any parent scopes, ultimately ending up searching the entire global scope. |
+
+Difficult to debug and test the code that relies on global variables.
 
 # 3. How do you check whether a string contains a substring?
 
@@ -36,6 +39,7 @@ const obj = {
 
 - **"key" in obj**
 - **obj.hasOwnProperty("key")**
+- **check it using undefined comparison**
 
 # 5. What is the main difference between Object.values and Object.entries method?
 
@@ -241,3 +245,11 @@ _decodeURIComponent()_
 # 27 What is a first order function?
 
 Opposite to HOF
+
+# 28 How dispatch an action on load?
+
+- in FC
+  useEffect(() => store.dispatch(handleAppInit()), []);
+
+- in Classes
+  componentDidMount LCM
