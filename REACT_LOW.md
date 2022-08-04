@@ -86,11 +86,19 @@ Redux DevTools is used for debugging application's state changes
 
 # 14. What are Redux selectors and Why to use them?
 
-access to state fields
+Selectors - logic for deriving data (usually written as functions)
+
+Selectors are primarily used to encapsulate logic for looking up specific values from state, logic for actually deriving values, and improving performance by avoiding unnecessary recalculations.
 
 # 15. What is Redux Form?
 
 Manager form state in Redux
+
+_main features:_
+
+- Field values persistence via Redux store.
+- Validation (sync/async) and submission.
+- Formatting, parsing and normalization of field values.
 
 # 16. What are the main features of Redux Form?
 

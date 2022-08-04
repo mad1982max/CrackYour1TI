@@ -14,6 +14,8 @@ Main node types (most often work with them) in the DOM:
 
 The nodes in the DOM are also referred to as parents, children, and siblings, depending on their relation to other nodes.
 
+With the DOM, we can create and build documents, navigate their structure, and add, modify, or delete elements and content. Anything found in an HTML or XML document can be accessed, changed, deleted, or added using the DOM
+
 # 2. Explain the difference between layout, painting and compositing?
 
 **Layout**
@@ -70,7 +72,7 @@ p:nth-child(2) {
 **_Paragraph 2_**
 
 ```css
-p:nth-of-type {
+p:nth-of-type(2) {
   /* ....; */
 }
 ```
@@ -83,3 +85,16 @@ p:nth-of-type {
 # 8. What is the difference between RGBa, HEX and HSLa?
 
 - RGBa, HSLa - have alpha channel
+
+**HEX** - color as hexadecimal value in the format #RRGGBB.
+R=red, G=green, b=blue hexadecimal value between 0 and FF
+
+**RGBa** - Color as decimal value in the form: rgb(R,G,B) with alpha channel
+R=red, G=green, b=blue decimal value between 0 and 255
+
+**HSLa** define colors using the Hue-saturation-lightness-alpha model (HSLA).
+HSLA color values are an extension of HSL color values with an alpha channel - which specifies the opacity of the color.
+
+# 9. Flex box
+
+Flexbox was designed as a one-dimensional layout model (it deals with layout in one dimension at a time — either as a row or as a column), and as a method that could offer space distribution between items in an interface and powerful alignment capabilities.
